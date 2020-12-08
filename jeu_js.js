@@ -16,11 +16,23 @@ var info_Monstre = document.getElementById("info_Monstre");
 var nom_Monstre = document.getElementById("nom_Monstre");
 var pv_Monstre = document.getElementById("pv_Monstre");
 
-/*--------------
+/*--------------- Gestion du joueur -------------------------*/
+
+pv_perso1.value = 900;
+pv_perso1.innerHTML = pv_perso1.value;
+
+
+mana_perso1.value = 100;
+mana_perso1.innerHTML = mana_perso1.value;
+
+def_perso1.value = 10;
+def_perso1.innerHTML = def_perso1.value;
 
 
 
-/* -------------- Gestion vie joueur -----------------------*/ 
+/*
+
+// -------------- Gestion vie joueur -----------------------
 
 function infopvjoueur() {
   var pv = document.getElementById(pvjoueur1);
@@ -38,7 +50,7 @@ function modifpvjoueur() {
   }
   infopvjoueur(); 						
 }
-/* -------------- Gestion mana joueur -----------------------*/ 
+// -------------- Gestion mana joueur ----------------------- 
 
 function infomanajoueur() {
   var pv = document.getElementById("manajoueur1");
@@ -57,7 +69,7 @@ function modifmanajoueur() {
   }
   infomanajoueur(); 					
 }
-/* -------------- Gestion vie monstre -----------------------*/ 
+// -------------- Gestion vie monstre -----------------------
 
 function infopvMonstre() {
   var pv = document.getElementById("pvMonstre");
@@ -73,9 +85,9 @@ function modif() {
   else if((pv.value+val)<0){
      pv.value = 0 ;
   }
-  infopvMonstre(); 							/* lance la fonction infoMonstre*/
+  infopvMonstre(); 							// lance la fonction infoMonstre
 }
-/* -------------- Affiche info du monstre -----------------------*/
+// -------------- Affiche info du monstre -----------------------
 function afficheinfo(){
 		document.getElementById("infoMonstre").style.opacity = "1";
 }
@@ -83,11 +95,11 @@ function cacheinfo(){
 		document.getElementById("infoMonstre").style.opacity = "0";
 }
 
-/* -------------- Affiche Menu du joueur -----------------------*/
+// -------------- Affiche Menu du joueur -----------------------
 var affiche = false ; 
 function menujoueur1(){
 	if (affiche == true){
-		document.getElementById("menujoueur").style.opacity = "0";	/* bouton juste invisible toujour cliquable */
+		document.getElementById("menujoueur").style.opacity = "0";	// bouton juste invisible toujour cliquable
 		affiche = false ;
 	}
 	else {
@@ -96,11 +108,11 @@ function menujoueur1(){
 	}
 }
 
-/* -------------- désactivation des boutons  -----------------------*/
+// -------------- désactivation des boutons  -----------------------
 
 
 
-/*-------------- fonction bouton -----------------------*/
+//-------------- fonction bouton -----------------------
 
 function clicjoueur1(){
 menujoueur1()	
@@ -121,11 +133,10 @@ function clicattaque() {
  }
 
   
-  /*document.body.Innethtml = "" ;*/
-  /* attaque aléatoire : crée un tableau d'id des perso qui correspond a joueur1234 */
+  //document.body.Innethtml = "" ;
+  // attaque aléatoire : crée un tableau d'id des perso qui correspond a joueur1234 
 
 
 
-
-
+*/
 
