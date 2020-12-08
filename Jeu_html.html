@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+		<title>Projet Jeu</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="jeu_css.css">
+		<script type="text/javascript" src="jeu_js.js"></script>
+	</head>
+    <body>
+			<section class="interfacePerso" >
+						<div id="nom_perso1">Perso1</div>
+						<div class = "info_perso" ></div>
+						<img id="image_perso1"src="image/Perso1.png">
+						<div class = "info_perso" id="blocpv_perso1">HP</div>
+						<div id = "pv_perso1">100</div>
+						<div class = "info_perso" id="blocmana_perso1">Mana</div>
+						<div id = "mana_perso1">100</div>
+						<div class = "info_perso" id="blocdef_perso1">Shield</div>
+						<div id = "def_perso1">0</div>
+			</section>
+				
+			<section class="actionjoueur1" id="menujoueur">
+				<div id = "infoevenement">Info</div>
+				<div id="boutonaction">
+					<input type="button" class="button" id="attaque" value="Attaque">
+					<input type="button" class="button" id="defence" value="Defence">
+					<input type="button" class="button" id="attaqueSpe" value="Special">
+					<input type="button" class="button" id="fintour" value="Fin Tour">
+				</div>
+			</section>
+			
+			<img id="imageGoblin" src="image/Goblin.png">
+			<div class="interfaceMonstre">
+				<div id="info_Monstre">
+					<div id="nom_Monstre">Goblin | Lvl : 10</div>
+					<progress max="100" value="100" id="pv_Monstre"></progress>
+					<span id="prcpv_Monstre">100%</span>
+				</div>
+			</div>	
+	</body>
+</html>

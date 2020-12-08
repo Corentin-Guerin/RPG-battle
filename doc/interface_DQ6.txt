@@ -1,0 +1,60 @@
+<html>
+            <head>
+                <title>HTML, CSS and JavaScript demo</title>
+<html>
+            <head>
+                <title>HTML, CSS and JavaScript demo</title>
+                <link rel="stylesheet" type="text/css" href="../CSS/Dragon_quest.css">
+            </head>
+      <body>
+<!-- Start your code here -->
+
+       <Top>
+        <Orders>
+          <followorder>
+            <div> Follow </div>
+            <div> Orders </div>
+          </followorder>
+        </Orders>
+         <img="matplotlib-grid-02.png">
+        <Stats> 
+          <name> 
+            <div> hero </div> <div> hero 2 </div>
+            <div> hero 3 </div> <div> hero4 </div>
+          </name>
+
+          <health>
+            <div> HP 140 </div> <div> HP 85 </div>
+            <div> HP 390 </div> <div> HP 200 </div>
+          </health>
+
+          <mana>
+<div> M 63 </div> <div> M 60 </div>
+            <div> M 67 </div> <div> M 56 </div>
+          </mana>
+
+          <level> 
+            <div> L 22 </div> <div> L 23 </div>
+            <div> L 20 </div> <div> L 18 </div>
+          </level>
+         </Stats>
+        </Top>
+
+
+      <Bottom> 
+        <action>
+            <div> Fight </div> <div> Change </div>
+            <div> Tactics </div> <div> Run </div>
+          </action>
+        <Description>
+          <mudo>
+            <div> Mudo 1 </div>
+          </mudo>
+        </Description>
+        <space> 
+          <p></p>
+        </space>
+       </Bottom>
+<!-- End your code here -->
+      </body>
+</html>

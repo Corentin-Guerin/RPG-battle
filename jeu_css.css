@@ -1,0 +1,261 @@
+body{										/*decale vers le bas */ 
+	background-image: url(image/BG2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow:hidden;
+
+}
+
+/* -------interface Perso--------*/
+
+.interfacePerso{
+		display: flex;
+			justify-content:center;
+		border: 2px solid black;
+		position: fixed;
+			left: 10%;
+			right: 50%;
+			top: 5%;
+			bottom: 75%;
+		background-color:#00e598;
+		box-shadow: 3px 3px 10px #000000;
+		border-radius:5px;
+}
+
+#nom_perso1{
+	display: flex;
+	position: fixed;
+		left: 24%;
+		right: 65%;
+		top: 6%;
+		bottom: 90%;
+	border: 1px solid black;
+	box-shadow: 2px 2px 5px #000000;
+	background-color: #6d6d6d;
+	justify-content:center;
+	border-radius:5px;
+}
+
+#image_perso1{
+	display: flex;
+	border: 1px solid black;
+	background-color: #6d6d6d;
+	box-shadow: 2px 2px 5px #000000;
+	border-radius:5px;
+		max-width: 8%;
+		height: auto;
+	position: fixed;
+		right: 75%;
+		bottom: 78%;
+		top: 6%;
+		left: 11%;
+}
+
+.info_perso{
+	box-shadow: 2px 2px 5px #000000;
+	border-radius:5px;
+	justify-content: center;
+}
+
+#blocpv_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: fixed;
+		left: 26%;
+		right: 67%;
+		top: 11%;
+		bottom: 85%;
+	background-color:#6d6d6d;
+	border-radius:5px;
+}
+
+#blocmana_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: fixed;
+		left: 34%;
+		right: 59%;
+		top: 11%;
+		bottom: 85%;
+	background-color: #6d6d6d;
+	border-radius:5px;
+}
+
+#blocdef_perso1{
+	display: flex;
+	border: 1px solid black;
+	position: fixed;
+		left: 42%;
+		right: 51%;
+		top: 11%;
+		bottom: 85%;
+	background-color: #6d6d6d;
+	border-radius:5px;
+}
+
+#pv_perso1{
+	display: flex;
+		justify-content: center;
+	border: 2px solid black;
+	position: fixed;
+		left: 26%;
+		right: 67%;
+		top: 16%;
+		bottom: 77%;
+	background-color: #6d6d6d;
+	border-radius:5px;
+	padding-top: 10px;	
+}
+
+#mana_perso1{
+	display: flex;
+		justify-content: center;
+	border: 2px solid black;
+	position: fixed;
+		left: 34%;
+		right: 59%;
+		top: 16%;
+		bottom: 77%;
+	background-color:#6d6d6d;
+	border-radius:5px;
+	padding-top: 10px;	
+}
+
+#def_perso1{
+	display: flex;
+		justify-content: center;
+	border: 2px solid black;
+	position: fixed;
+		left: 42%;
+		right: 51%;
+		top: 16%;
+		bottom: 77%;
+	background-color: #6d6d6d;
+	border-radius:5px;
+	padding-top: 10px;	
+}
+
+/* --------interface action joueur 1 --------*/
+
+#infoevenement{
+	display: flex;
+		justify-content: center;
+	border: 3px solid #ffffff;
+		width : 40%;
+		height: 10%;
+	position: fixed;
+		top:27%;
+		left: 51%;
+	background-color: black;
+	opacity: 0.8;
+	box-shadow: 2px 2px 5px #000000;
+	color: #ffffff;
+	font-size: 13px;
+	border-radius:5px;
+}
+
+#boutonaction{
+  display: flex; 
+	justify-content: space-around;
+  border: 3px solid black;
+		width : 40%;
+		height: 19%;
+  position: fixed;
+		top:5%;
+		left: 51%;
+  align-items: center;
+  background:linear-gradient(#360606,#3b1e1e);
+  box-shadow: 2px 2px 5px #000000;
+  border-radius:5px;
+}
+
+/* --------Bouton--------*/
+
+.button {
+	display:inline-block;
+		justify-content: center;
+	background-color:#555555;
+	border-radius:7px;
+	border:2px solid #000000;	
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+	padding:9px 22px;
+	border: 1px solid #000000;
+		height: 80px;
+		width: 100px;
+}
+.button:hover {
+	background-color:#333333;
+}
+#fintour{
+	background-color:#999999;
+}
+#fintour:hover{
+	background-color:#333333;
+}
+.button:active {
+	position:relative;
+	top:3px;
+}
+
+/* --------Interface Monstre--------*/
+.interfaceMonstre{
+		opacity: 0;
+		display: flex;
+			justify-content:center;
+		border: 2px solid black;
+		position: fixed;
+			left: 50%;
+			right: 20%;
+			top: 55%;
+			bottom: 25%;
+		background-color:#00ee05;
+		box-shadow: 3px 3px 10px #000000;
+		border-radius:5px;
+}
+#imageGoblin{
+	max-width: 20%;
+	height: auto;
+	position: fixed;
+		top: 55%;
+		left:25%;	
+}
+
+#info_Monstre{
+	font-size: 20px;
+	text-shadow: 1px 1px 2px black;
+}
+
+#nom_Monstre{
+	display:flex;
+		justify-content:center;
+	padding-top:15px;
+	padding-bottom:15px;
+	
+}
+
+#pv_Monstre{
+	padding-top:35px;	
+	display:flex;
+		justify-content:center;
+}
+
+#prcpv_Monstre{
+	display:flex;
+		justify-content:center;
+	padding-top:15px;
+	padding-bottom:15px;
+	
+}
+
+#imageGoblin:hover~.interfaceMonstre{
+	opacity:1;
+}
+
+
+
+
+
+
+
