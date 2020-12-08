@@ -1,34 +1,26 @@
 
-var pv_perso1 = document.getElementById("pv_perso1");
-var mana_perso1 = document.getElementById("mana_perso1");
-var def_perso1= document.getElementById("def_perso1");
+var pv_perso1= document.getElementById("pv_perso1") ;
+var mana_perso1= document.getElementById("mana_perso1") ;
+var def_perso1= document.getElementById("def_perso1") ;
 
-var infoevenement = document.getElementById("infoevenement");
+var infoevenement = document.getElementById("infoevenement") ;
 
-var bouton_atq = document.getElementById("attaque");
-var bouton_shield = document.getElementById("defence");
-var bouton_spe = document.getElementById("attaqueSpe");
-var bouton_fintour = document.getElementById("fintour");
+var bouton_atq = document.getElementById("attaque") ;
+var bouton_shield = document.getElementById("defence") ;
+var bouton_spe = document.getElementById("attaqueSpe") ;
+var bouton_fintour = document.getElementById("fintour") ;
 
 
-var imageGoblin = document.getElementById("imageGoblin");
-var info_Monstre = document.getElementById("info_Monstre");
-var nom_Monstre = document.getElementById("nom_Monstre");
+var imageGoblin = document.getElementById("imageGoblin") ;
+var info_Monstre = document.getElementById("info_Monstre") ;
+var nom_Monstre = document.getElementById("nom_Monstre") ;
 var pv_Monstre = document.getElementById("pv_Monstre");
 
 /*--------------- Gestion du joueur -------------------------*/
 
-pv_perso1.value = 900;
-pv_perso1.innerHTML = pv_perso1.value;
-
-
-mana_perso1.value = 100;
-mana_perso1.innerHTML = mana_perso1.value;
-
-def_perso1.value = 10;
-def_perso1.innerHTML = def_perso1.value;
-
-
+pv_perso1.innerHTML=100;
+mana_perso1.innerHTML=100;
+def_perso1.innerHTML = 0;
 
 /*
 
