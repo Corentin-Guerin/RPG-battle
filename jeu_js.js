@@ -16,6 +16,7 @@ var info_Monstre = document.getElementById("info_Monstre");
 var nom_Monstre = document.getElementById("nom_Monstre");
 var pv_Monstre = document.getElementById("pv_Monstre");
 
+/*--------------
 
 
 

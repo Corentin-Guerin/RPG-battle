@@ -164,7 +164,7 @@ body{										/*decale vers le bas */
 		top:5%;
 		left: 51%;
   align-items: center;
-  background:linear-gradient(#360606,#3b1e1e);
+  background:linear-gradient(#00e589,#00e5aa);
   box-shadow: 2px 2px 5px #000000;
   border-radius:5px;
 }
