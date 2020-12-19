@@ -8,35 +8,86 @@
 	</head>
     <body>
 			<section class="interfacePerso" >
-					<div id="nom_perso1">Perso1</div>
-					<div class = "info_perso" ></div>
-					<img id="image_perso1"src="image/Perso1.png">
-					<div class = "info_perso" id="blocpv_perso1">HP</div>
-					<div id="pv_perso1">100</div>
-					<div class = "info_perso" id="blocmana_perso1">Mana</div>
-					<div id = "mana_perso1">100</div>
-					<div class = "info_perso" id="blocdef_perso1">Shield</div>
-					<div id = "def_perso1">0</div>
-			</section>
-				
-			<section class="actionjoueur1" id="menujoueur">
-				<div id = "infoevenement">Info</div>
-				<div id="boutonaction">
-					<input type="button" class="button" id="attaque" value="Attaque">
-					<input type="button" class="button" id="defence" value="Defence">
-					<input type="button" class="button" id="attaqueSpe" value="Special">
-					<input type="button" class="button" id="fintour" value="Fin Tour">
+			    <div id="personnage1" class="personnage">
+					<button class="personnage" id="buttonPerso1" enabled>
+						<img src="image/Perso1.png" id="perso1"  class="imgPerso">
+						<div><label class="labelpourcentage" id="nbpvjoueur1">100</label>
+							<progress  value="100" max="100" class="pourcentagevie" id="pvjoueur1"></progress>
+						</div>  
+						<div class="infoPerso"> Perso1 <br> Dégats: 10-15 <br> Mana  :<span id="manaPlayer1" >100</span> <br>Bouclier: <span id="shieldjoueur1">0</span>%</div>
+					</button><BR>
+					
+					<button  class="buttonAction" id="buttonattperso1" enabled>
+						<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
+					</button>
+					
+					<button class="buttonAction" id="buttondefenseperso1" enabled>
+						<div><img type="image" src="image/defence.png" class="imgaction" ></div>
+					</button>
+					
+					<button class="buttonAction" id="buttonspecialperso1" enabled>
+						<div><img type="image"  src="image/special.png" class="imgaction" ></div>
+					</button>
 				</div>
+				
+				
 			</section>
 			
-			<img id="imageGoblin" src="image/Goblin.png">
-			<div class="interfaceMonstre">
-				<div id="info_Monstre">
-					<div id="nom_Monstre">Goblin | Lvl : 10</div>
-					<progress max="100" value="100" id="pv_Monstre"></progress>
-					<span id="prcpv_Monstre">100%</span>
-				</div>
-			</div>
-			<script type="text/javascript" src="jeu_js.js"></script>
+			<section class="interfaceMonstre">
+				<button disabled class="personnage" id="buttonMonstre1">
+					<img src="image/Goblin.png" id="monstre1"  class="imgMonstre">   
+					<div id="infomonstre1">
+						<div> Goblin</div> 
+						<label class="labelpourcentage">100</label>
+						<progress  value="100" max="100" class="pourcentagevie" id="monstre1pv"></progress>
+					</div>  
+				</button>
+
+				<button disabled class="personnage" id="buttonMonstre2">
+					<img src="image/Ogre.png" id="monstre2" class="imgMonstre">   
+					<div id="infomonstre2">
+						<div>Ogre</div> 
+						<label class="labelpourcentage">300</label>
+						<progress  value="300" max="300" class="pourcentagevie" id="monstre2pv"></progress>
+                    </div>
+				</button>
+
+				<button disabled class="personnage" id="buttonMonstre3">
+					<img src="image/Orc.png" id="monstre3"  class="imgMonstre">  
+					<div id="infomonstre3">
+						<div>Orc</div>
+						<label class="labelpourcentage">100</label>
+						<progress  value="100" max="100" class="pourcentagevie" id="monstre3pv"></progress>
+                    </div>
+				</button>
+
+			</section>     	
+				
+		
+		<script type="text/javascript" src="jeu_js.js"></script>
 	</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
