@@ -5,6 +5,12 @@ body{
 		overflow:hidden;
 
 }
+
+button:active {
+	position:relative;
+	top:3px;
+}
+
 .labelpourcentage{
 	
 }
@@ -39,7 +45,7 @@ body{
 
 .buttonAction{
 		border-radius: 40%;
-		/*display: none;*/
+		/*display: none;*/												/*masque l'element */
 
 }
 .imgaction{
