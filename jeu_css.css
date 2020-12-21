@@ -11,9 +11,6 @@ button:active {
 	top:3px;
 }
 
-.labelpourcentage{
-	
-}
 
 /*------------------------------------------------------------------------------*/
 
@@ -45,7 +42,7 @@ button:active {
 
 .boutonAction{
 		border-radius: 40%;
-		/*display: none;*/												/*masque l'element */
+		/*display: none;		*/										/*masque l'element */
 
 }
 .imgaction{
@@ -75,6 +72,7 @@ button:active {
 /*------------------------------------------------------------------------------*/
 
 .interfaceMonstre{
+	
 		height:70%;
 		background-color: rgba(255,0,0,0.0);
 		display: flex;

@@ -9,11 +9,11 @@
     <body>
 			<section class="interfacePerso" >
 			    <div id="personnage1" class="personnage">
-					<button class="personnage" id="boutonPerso1" enabled>
+					<button onclick="clicperso('menuperso1')" class="personnage" id="boutonPerso1" enabled>
 						<img src="image/Perso1.png" id="perso1"  class="imgPerso">
 						<div class="infoperso">
 							<div>
-								Perso1 
+								Sigvald
 								<br>
 								Pv:
 								<progress  value="100" max="100" class="pourcentagevie" id="pvperso1"></progress>
@@ -33,25 +33,27 @@
 						</div>	
 					</button><br>
 					
-					<button class="boutonAction" id="boutonattperso1" enabled>
-						<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutondefenseperso1" enabled>
-						<div><img type="image" src="image/defence.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutonspecialperso1" enabled>
-						<div><img type="image"  src="image/special.png" class="imgaction" ></div>
-					</button>
+					<div  id="menuperso1" class="Menuperso">
+						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso1" enabled>
+							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutondefenseperso1" enabled>
+							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutonspecialperso1" enabled>
+							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
+						</button>
+					</div>	
 				</div>
 				
 				<div id="personnage2" class="personnage">
-					<button class="personnage" id="boutonPerso2" enabled>
+					<button onclick="clicperso('menuperso2')" class="personnage" id="boutonPerso2" enabled>
 						<img src="image/Perso2.png" id="perso2"  class="imgPerso">
 						<div class="infoperso">	
 							<div>
-								Perso2 
+								Lingwë
 								<br>
 								Pv:
 								<progress  value="100" max="100" class="pourcentagevie" id="pvperso2"></progress>
@@ -69,27 +71,29 @@
 								Dégats: 10-15 
 							</div>
 						</div>	
-					</button><BR>
+					</button><br>
 					
-					<button  class="boutonAction" id="boutonattperso2" enabled>
-						<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutondefenseperso2" enabled>
-						<div><img type="image" src="image/defence.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutonspecialperso2" enabled>
-						<div><img type="image"  src="image/special.png" class="imgaction" ></div>
-					</button>
+					<div  id="menuperso2" class="Menuperso">
+						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso2" enabled>
+							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutondefenseperso2" enabled>
+							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutonspecialperso2" enabled>
+							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
+						</button>
+					</div>
 				</div>
 				
 				<div id="personnage3" class="personnage">
-					<button class="personnage" id="boutonPerso3" enabled>
+					<button onclick="clicperso('menuperso3')" class="personnage" id="boutonPerso3" enabled>
 						<img src="image/Perso3.png" id="perso3"  class="imgPerso">
 						<div class="infoperso">
 							<div>
-								Perso3
+								Finwëth
 								<br>
 								Pv:
 								<progress  value="100" max="100" class="pourcentagevie" id="pvperso3"></progress>
@@ -107,27 +111,29 @@
 								Dégats: 10-15 
 							</div>
 						</div>	
-					</button><BR>
+					</button><br>
 					
-					<button  class="boutonAction" id="boutonattperso3" enabled>
-						<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutondefenseperso3" enabled>
-						<div><img type="image" src="image/defence.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutonspecialperso3" enabled>
-						<div><img type="image"  src="image/special.png" class="imgaction" ></div>
-					</button>
+					<div id="menuperso3" class="Menuperso">
+						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso3" enabled>
+							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutondefenseperso3" enabled>
+							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutonspecialperso3" enabled>
+							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
+						</button>
+					</div>	
 				</div>
 				
 				<div id="personnage4" class="personnage">
-					<button class="personnage" id="boutonPerso4" enabled>
+					<button onclick="clicperso('menuperso4')" class="personnage" id="boutonPerso4" enabled>
 						<img src="image/Perso4.png" id="perso4"  class="imgPerso">
 						<div class="infoperso">
 							<div>
-								Perso4
+								Teleri 
 								<br>
 								Pv:
 								<progress  value="100" max="100" class="pourcentagevie" id="pvperso4"></progress>
@@ -146,18 +152,19 @@
 							</div>
 						</div>
 					</button><BR>
-					
-					<button  class="boutonAction" id="boutonattperso4" enabled>
-						<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutondefenseperso4" enabled>
-						<div><img type="image" src="image/defence.png" class="imgaction" ></div>
-					</button>
-					
-					<button class="boutonAction" id="boutonspecialperso4" enabled>
-						<div><img type="image"  src="image/special.png" class="imgaction" ></div>
-					</button>
+					<div  id="menuperso4" class="Menuperso">
+						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso4" enabled>
+							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutondefenseperso4" enabled>
+							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
+						</button>
+						
+						<button class="boutonAction" id="boutonspecialperso4" enabled>
+							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
+						</button>
+					</div>
 				</div>
 			</section>
 			
@@ -167,7 +174,7 @@
 				
 			
 			<section class="interfaceMonstre">
-				<button  onclick="clicmonstre('pvmonstre1','labelmonstre1')" class="personnage" id="boutonMonstre1">
+				<button disabled  onclick="clicmonstre('pvmonstre1','labelmonstre1','monstre1')" class="personnage" id="boutonMonstre1">
 					<img src="image/Goblin.png" id="monstre1"  class="imgMonstre">   
 					<div id="infomonstre1">
 						<div> Goblin</div> 
@@ -176,20 +183,20 @@
 					</div>  
 				</button>
 
-				<button  onclick="clicmonstre('pvmonstre2','labelmonstre2')" class="personnage" id="boutonMonstre2">
+				<button disabled onclick="clicmonstre('pvmonstre2','labelmonstre2','monstre2')" class="personnage" id="boutonMonstre2">
 					<img src="image/Ogre.png" id="monstre2" class="imgMonstre">   
 					<div id="infomonstre2">
 						<div>Ogre</div> 
-						<progress  value="300" max="300" class="pourcentagevie" id="pvmonstre2"></progress>
+						<progress   class="pourcentagevie" id="pvmonstre2" value="300" max="300" min="0"></progress>
 						<span id="labelmonstre2">300</span>
                     </div>
 				</button>
 
-				<button  onclick="clicmonstre('pvmonstre3','labelmonstre3')" class="personnage" id="boutonMonstre3">
+				<button disabled  onclick="clicmonstre('pvmonstre3','labelmonstre3','monstre3')" class="personnage" id="boutonMonstre3">
 					<img src="image/Orc.png" id="monstre3"  class="imgMonstre">  
 					<div id="infomonstre3">
 						<div>Orc</div>
-						<progress  value="100" max="100" class="pourcentagevie" id="pvmonstre3"></progress>
+						<progress  class="pourcentagevie" id="pvmonstre3" value="100" max="100" min="0" ></progress>
 						<span id="labelmonstre3">100</span>
                     </div>
 				</button>
