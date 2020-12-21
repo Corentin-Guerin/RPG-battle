@@ -39,8 +39,8 @@ button:active {
 
 
 .imgPerso{
-		width:250px;
-		height:250px;
+		width:200px;
+		height:200px;
 }
 
 .buttonAction{
@@ -81,8 +81,8 @@ button:active {
 			text-align: center;
 }
 .imgMonstre{
-		width:450px;
-		height:450px;
+		width:400px;
+		height:400px;
 }
 
 
@@ -141,11 +141,10 @@ button:active {
 
 
 #findutour{
-  width:10%;
-  height: 10%;
-    position:absolute;
-    bottom:50%;
-    right:0%;
+  width:5%;
+  height: 5%;
+    position:relative;
+    left:95%;
 
 }
 

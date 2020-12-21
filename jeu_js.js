@@ -26,13 +26,12 @@ function modifpvmonstre(monstre,label) {
 
 /*--------------- Fonction bouton ------------------*/
 
-
-
-
-
 function clicmonstre(monstre,label) {	//Bouton d'attaque sur monstre avec en parametre le monstre attaquer
 	modifpvmonstre(monstre,label)
  }
+ 
+ 
+ 
  
  
  /*--------------- Liste info  ------------------*/
