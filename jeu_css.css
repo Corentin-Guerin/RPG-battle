@@ -43,7 +43,7 @@ button:active {
 		height:200px;
 }
 
-.buttonAction{
+.boutonAction{
 		border-radius: 40%;
 		/*display: none;*/												/*masque l'element */
 
@@ -55,20 +55,20 @@ button:active {
 }
 
 
-#buttonPerso1{
+#boutonPerso1{
 		background-color: rgba(0,0,0,0.0);
 }
 
-#buttonPerso2{
+#boutonPerso2{
 		background-color: rgba(0,0,0,0.0);
 }
 
 
-#buttonPerso3{
+#boutonPerso3{
 		background-color: rgba(0,0,0,0.0);
 }
 
-#buttonPerso4{
+#boutonPerso4{
 		background-color: rgba(0,0,0,0.0);
 }
 
@@ -119,16 +119,16 @@ button:active {
 
 
 
-#buttonMonstre1{
+#boutonMonstre1{
 		background-color: rgba(255,255,255,0.0);
 
 }
 
-#buttonMonstre2{
+#boutonMonstre2{
 		background-color: rgba(255,255,255,0.0);
 }
 
-#buttonMonstre3{
+#boutonMonstre3{
 		background-color: rgba(255,255,255,0.0);
 }
 
