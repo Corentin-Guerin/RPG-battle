@@ -6,13 +6,14 @@ body{
 
 }
 .labelpourcentage{
-	color: white;
+	
 }
 
 /*------------------------------------------------------------------------------*/
 
 .interfacePerso{
 		width: 95%;
+		
 		display: flex;
 			text-align: center;
 
@@ -21,10 +22,10 @@ body{
 .personnage{
 		margin : 0 auto 0 auto;
 		border: 0px;
+		color: white;
 }
-.infoPerso{
-	color: white;
-}
+
+
 .imgPerso{
 		width:250px;
 		height:250px;
@@ -32,7 +33,7 @@ body{
 
 .buttonAction{
 		border-radius: 40%;
-		display: none;
+		/*display: none;*/
 
 }
 .imgaction{
@@ -43,20 +44,20 @@ body{
 
 
 #buttonPerso1{
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.0);
 }
 
 #buttonPerso2{
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.0);
 }
 
 
 #buttonPerso3{
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.0);
 }
 
 #buttonPerso4{
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.0);
 }
 
 /*------------------------------------------------------------------------------*/
@@ -85,7 +86,7 @@ body{
 
 
 
-#monstre2:hover~#infomonstre2{
+#monstre2:hover~#infomonstre2 {
 		opacity: 1;
 }
 
@@ -119,7 +120,10 @@ body{
 		background-color: rgba(255,255,255,0.0);
 }
 
+.pourcentagevie{
 
+ background-color: green;
+}
 
 /*------------------------------------------------------------------------------*/
 
