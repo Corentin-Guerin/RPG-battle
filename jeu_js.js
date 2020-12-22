@@ -1,5 +1,7 @@
 var boostdommage = -0 
 var malediction = -0 
+
+
 var Perso = ['pvperso1', 'pvperso2', 'pvperso3', 'pvperso4'];
 
 
@@ -239,11 +241,23 @@ function active_bouton_Perso(){
 	document.getElementById('boutonPerso4').disabled=false;
 }
 
-function affichePerso(randomPerso){
+function affichePerso(randomPerso,randomvtab){
+	if(randomPerso== "pvperso1"){
+			document.getElementById('boutonPerso1').style.display = "none";
+	}
+	if(randomPerso == "pvperso2"){
+			document.getElementById('boutonPerso2').style.display = "none";
+	}	
+	if(randomPerso== "pvperso3"){
+			document.getElementById('boutonPerso3').style.display = "none";
+	}
+	if(randomPerso == "pvperso4"){
+			document.getElementById('boutonPerso4').style.display = "none";
+	}
 	
+	Perso.splice(randomvtab-1, 1);					//supp l'element du tableau			
+ }	
 	
-	
-}
 
 
 
@@ -270,7 +284,7 @@ function modifpvmonstre(monstre,label,imgmonstre) {
 		if((pv.value+val+boostdommage)<=pv.max && (pv.value+val)>=0){			
 			pv.value += val +boostdommage ;
 		}
-		else if((pv.value+val)<0){
+		else if((pv.value+val)<=0){
 			 pv.value = 0 ;
 			 afficheMonstre(imgmonstre);					/* lance la fonction afficheMonstre*/
 		}
@@ -288,114 +302,111 @@ function afficheMonstre(imgmonstre){
 	}	 
  }
  
- function attaquemonstre(){
-	 if (document.getElementById('monstre1').style.display != "none"){
-		 
+function attaquemonstre(){
+	if (document.getElementById('monstre1').style.display != "none"){
+
+		var randomvtab = Math.floor(Math.random() * Perso.length);			//Pas du tous aleatoire ?
+		var randomPerso = Perso[randomvtab];								//si perso mort ne trouve pas de nouveau perso 
+		
 		var val = (Math.round(Math.random() * ((-20)-(-10)+1)-10));
-		
-		var randomPerso = Perso[Math.floor(Math.random() * Perso.length)];
-		
-		var pv = document.getElementById(Perso=[randomPerso]) ;
-		if((pv.value+val+malediction)<=pv.max && (pv.value+val)>=0){			//malédiction		
-			pv.value += val+malediction ;
-		}
-		else if((pv.value+val)<0){
-			 pv.value = 0 ;
-			 affichePerso(randomPerso);					/* lance la fonction afficheP*/
-		}
+	
+	
 		if(randomPerso == "pvperso1"){
-			var pvj1= document.getElementById('pvperso1');
-			var prcj1 = document.getElementById('labelpvperso1');
-			prcj1.innerHTML = pvj1.value;		
+			var shield = document.getElementById('bouclierperso1') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value += val+malediction ;
+				
+				var pvj1= document.getElementById('bouclierperso1');
+				var prcj1 = document.getElementById('labelbouclierperso1');
+				prcj1.innerHTML = pvj1.value;		
+			}
+			else if((shield.value+val+malediction)<0){
+
+				var pv = document.getElementById('pvperso1') ;
+				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
+					pv.value += val+malediction ;				
+				}
+				else if((pv.value+val+malediction)<=0){
+				pv.value = 0 ;
+				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj1= document.getElementById('pvperso1');
+				var prcj1 = document.getElementById('labelpvperso1');
+				prcj1.innerHTML = pvj1.value;
+			}
 		}
 		if(randomPerso == "pvperso2"){
-			var pvj2 = document.getElementById('pvperso2');
-			var prcj2 = document.getElementById('labelpvperso2');
-			prcj2.innerHTML = pvj2.value;		
+			var shield = document.getElementById('bouclierperso2') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value += val+malediction ;
+				
+				var pvj1= document.getElementById('bouclierperso2');
+				var prcj1 = document.getElementById('labelbouclierperso2');
+				prcj1.innerHTML = pvj1.value;		
+			}
+			else if((shield.value+val+malediction)<0){
+				var pv = document.getElementById('pvperso2') ;
+				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
+					pv.value += val+malediction ;				
+				}
+				else if((pv.value+val+malediction)<=0){
+				pv.value = 0 ;
+				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj1= document.getElementById('pvperso2');
+				var prcj1 = document.getElementById('labelpvperso2');
+				prcj1.innerHTML = pvj1.value;
+			}
 		}
 		if(randomPerso == "pvperso3"){
-			var pvj3 = document.getElementById('pvperso3');
-			var prcj3 = document.getElementById('labelpvperso3');
-			prcj3.innerHTML = pvj3.value;		
+			var shield = document.getElementById('bouclierperso3') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value += val+malediction ;
+				
+				var pvj1= document.getElementById('bouclierperso3');
+				var prcj1 = document.getElementById('labelbouclierperso3');
+				prcj1.innerHTML = pvj1.value;		
+			}
+			else if((shield.value+val+malediction)<0){
+				var pv = document.getElementById('pvperso3') ;
+				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
+					pv.value += val+malediction ;				
+				}
+				else if((pv.value+val+malediction)<=0){
+				pv.value = 0 ;
+				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj1= document.getElementById('pvperso3');
+				var prcj1 = document.getElementById('labelpvperso3');
+				prcj1.innerHTML = pvj1.value;
+			}
 		}
 		if(randomPerso == "pvperso4"){
-			var pvj4= document.getElementById('pvperso4');
-			var prcj4 = document.getElementById('labelpvperso4');
-			prcj4.innerHTML = pvj4.value;		
+			var shield = document.getElementById('bouclierperso4') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value += val+malediction ;
+				
+				var pvj1= document.getElementById('bouclierperso4');
+				var prcj1 = document.getElementById('labelbouclierperso4');
+				prcj1.innerHTML = pvj1.value;		
+			}
+			else if((shield.value+val+malediction)<0){
+				var pv = document.getElementById('pvperso4') ;
+				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
+					pv.value += val+malediction ;				
+				}
+				else if((pv.value+val+malediction)<=0){
+				pv.value = 0 ;
+				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj1= document.getElementById('pvperso4');
+				var prcj1 = document.getElementById('labelpvperso4');
+				prcj1.innerHTML = pvj1.value;
+			}
 		}
-	 }
-	 if (document.getElementById('monstre2').style.display != "none"){
-		 
-		var val = (Math.round(Math.random() * ((-20)-(-10)+1)-10));
-		
-		var randomPerso = Perso[Math.floor(Math.random() * Perso.length)];
-		
-		var pv = document.getElementById(Perso = [randomPerso]) ;
-		if((pv.value+val+malediction)<=pv.max && (pv.value+val)>=0){			//malédiction		
-			pv.value += val+malediction ;
-		}
-		else if((pv.value+val)<0){
-			 pv.value = 0 ;
-			 affichePerso(randomPerso);					/* lance la fonction afficheP*/
-		}
-		if(randomPerso == "pvperso1"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso1');
-			prc.innerHTML = pv.value;		
-		}
-		if(randomPerso == "pvperso2"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso2');
-			prc.innerHTML = pv.value;		
-		}
-		if(randomPerso == "pvperso3"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso3');
-			prc.innerHTML = pv.value;		
-		}
-		if(randomPerso == "pvperso4"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso4');
-			prc.innerHTML = pv.value;		
-		}
-	 }
-	 if (document.getElementById('monstre3').style.display != "none"){
-		 
-		var val = (Math.round(Math.random() * ((-20)-(-10)+1)-10));
-		
-		var randomPerso = Perso[Math.floor(Math.random() * Perso.length)];
-		
-		var pv = document.getElementById(Perso = [randomPerso]) ;
-		if((pv.value+val+malediction)<=pv.max && (pv.value+val)>=0){			//malédiction		
-			pv.value += val+malediction ;
-		}
-		else if((pv.value+val)<0){
-			 pv.value = 0 ;
-			 affichePerso(randomPerso);					/* lance la fonction afficheP*/
-		}
-		if(randomPerso == "pvperso1"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso1');
-			prc.innerHTML = pv.value;		
-		}
-		if(randomPerso == "pvperso2"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso2');
-			prc.innerHTML = pv.value;		
-		}
-		if(randomPerso == "pvperso3"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso3');
-			prc.innerHTML = pv.value;		
-		}
-		if(randomPerso == "pvperso4"){
-			var pv = document.getElementById('pvperso4');
-			var prc = document.getElementById('labelpvperso4');
-			prc.innerHTML = pv.value;		
-		}
-	 }
-	 
- }
+	}	
+}
+
  
 /*--------------- Fonction bouton ------------------*/
 
@@ -461,15 +472,10 @@ Special perso4 :
 
  /*--------------- Liste info  ------------------*/
  
- 
- // clic perso 			> lance la fonction affichemenu(persoclicquer) sur le perso clicquer		>> affiche menu du perso     	///////////////
-
- // clic menu attaque 	> lance la fonction clicattaque(persoNum) 		>> desactive autre choix 	>> active bouton monstre						>>descative perso fait ///////////////
- // clic menu defence	> lance la fonction clicdefense(persoNum) 		>> desactive autre choix	>>Donne un bouclier au perso cliquer			>>descative perso fait	//////////////////
  // clic menu special	> voir en fonction des joueurs		>> desactive autre choix  >> diminue mana  >>descative perso fait
  
  
- // clic monstre 		> lance la fonction clicmonstre(monstre,label) sur le monstre clicquer		>>Monstre perd de la vie >> desactive bouton monstre >>check hp monstre		//////////////
+ // clic monstre 		> lance la fonction clicmonstre(monstre,label) sur le monstre clicquer		>>Monstre perd de la vie >> desactive bouton monstre >>check hp monstre	
  // clic findetour		> lance la fonction findetour	>>lance attaque des monstre		>>reactive les perso		>>check hp perso
  
  
