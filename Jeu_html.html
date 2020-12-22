@@ -21,7 +21,7 @@
 							</div>  
 							<div>
 								Mana:
-								<progress  value="100" max="100" min="0" class="Bouclier" id="manaperso1"></progress>
+								<progress  value="100" max="100" min="0" class="Mana" id="manaperso1"></progress>
 								<span id="labelmanaperso1" >100</span>/100
 								<br>
 								Bouclier:
@@ -33,18 +33,19 @@
 						</div>	
 					</button><br>
 					
-					<div  id="menuperso1" class="Menuperso">
-						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso1" enabled>
+					<div id="menuperso1" class="Menuperso">
+						<button  onclick="clicattaque('boutonAttaque','menuperso1')" class="boutonAttaque" id="boutonattperso1" enabled>
 							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutondefenseperso1" enabled>
+						<button onclick="clicdefense('boutonDefense','menuperso1')" class="boutonDefense" id="boutondefenseperso1" enabled>
 							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutonspecialperso1" enabled>
+						<button  class="boutonSpecial" id="boutonspecialperso1" enabled>
 							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
 						</button>
+						<span id="infospeperso1">Boost Dégats</span>
 					</div>	
 				</div>
 				
@@ -61,7 +62,7 @@
 							</div>  
 							<div> 
 								Mana:
-								<progress  value="100" max="100" min="0" class="Bouclier" id="manaperso2"></progress>
+								<progress  value="100" max="100" min="0" class="Mana" id="manaperso2"></progress>
 								<span id="labelmanaperso2" >100</span>/100
 								<br>
 								Bouclier:
@@ -74,17 +75,18 @@
 					</button><br>
 					
 					<div  id="menuperso2" class="Menuperso">
-						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso2" enabled>
+						<button onclick="clicattaque('boutonAttaque','menuperso2')" class="boutonAttaque" id="boutonattperso2" enabled>
 							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutondefenseperso2" enabled>
+						<button onclick="clicdefense('boutonDefense','menuperso2')" class="boutonDefense" id="boutondefenseperso2" enabled>
 							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutonspecialperso2" enabled>
+						<button class="boutonSpecial" id="boutonspecialperso2" enabled>
 							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
 						</button>
+						<span id="infospeperso2">Heal</span>
 					</div>
 				</div>
 				
@@ -101,7 +103,7 @@
 							</div>  
 							<div>  
 								Mana:
-								<progress  value="100" max="100" min="0" class="Bouclier" id="manaperso3"></progress>
+								<progress  value="100" max="100" min="0" class="Mana" id="manaperso3"></progress>
 								<span id="labelmanaperso3" >100</span>/100
 								<br>
 								Bouclier: 
@@ -114,17 +116,18 @@
 					</button><br>
 					
 					<div id="menuperso3" class="Menuperso">
-						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso3" enabled>
+						<button onclick="clicattaque('boutonAttaque','menuperso3')" class="boutonAttaque" id="boutonattperso3" enabled>
 							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutondefenseperso3" enabled>
+						<button onclick="clicdefense('boutonDefense','menuperso3')" onclick="clicdefense('boutonDefense','menuperso3')" class="boutonDefense" id="boutondefenseperso3" enabled>
 							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutonspecialperso3" enabled>
+						<button class="boutonSpecial" id="boutonspecialperso3" enabled>
 							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
 						</button>
+						<span id="infospeperso3">Heal</span>
 					</div>	
 				</div>
 				
@@ -141,7 +144,7 @@
 							</div>  
 							<div> 
 								Mana:
-								<progress  value="100" max="100" min="0" class="Bouclier" id="manaperso4"></progress>
+								<progress  value="100" max="100" min="0" class="Mana" id="manaperso4"></progress>
 								<span id="labelmanaperso4" >100</span>/100 
 								<br>
 								Bouclier:
@@ -151,19 +154,20 @@
 								Dégats: 10-15 
 							</div>
 						</div>
-					</button><BR>
-					<div  id="menuperso4" class="Menuperso">
-						<button onclick="clicattaque()" class="boutonAction" id="boutonattperso4" enabled>
+					</button><br>
+					<div id="menuperso4" class="Menuperso">
+						<button onclick="clicattaque('boutonAttaque','menuperso4')"class="boutonAttaque" id="boutonattperso4" enabled>
 							<div><img type="image" src="image/attaque.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutondefenseperso4" enabled>
+						<button onclick="clicdefense('boutonDefense','menuperso4')" class="boutonDefense" id="boutondefenseperso4" enabled>
 							<div><img type="image" src="image/defence.png" class="imgaction" ></div>
 						</button>
 						
-						<button class="boutonAction" id="boutonspecialperso4" enabled>
+						<button class="boutonSpecial" id="boutonspecialperso4" enabled>
 							<div><img type="image"  src="image/special.png" class="imgaction" ></div>
 						</button>
+						<span id="infospeperso4">Boost Dégats</span>
 					</div>
 				</div>
 			</section>

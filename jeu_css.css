@@ -40,7 +40,17 @@ button:active {
 		height:200px;
 }
 
-.boutonAction{
+.boutonAttaque{
+		border-radius: 40%;
+		/*display: none;		*/										/*masque l'element */
+
+}
+.boutonDefense{
+		border-radius: 40%;
+		/*display: none;		*/										/*masque l'element */
+
+}
+.boutonSpecial{
 		border-radius: 40%;
 		/*display: none;		*/										/*masque l'element */
 
@@ -67,6 +77,47 @@ button:active {
 
 #boutonPerso4{
 		background-color: rgba(0,0,0,0.0);
+}
+
+#boutonspecialperso1:hover~#infospeperso1{
+		opacity: 1;
+
+}
+#infospeperso1{
+		opacity: 0.0;
+		color: white;
+		display: flex;
+			flex-direction:column ;
+}
+#boutonspecialperso2:hover~#infospeperso2{
+		opacity: 1;
+
+}
+#infospeperso2{
+		opacity: 0.0;
+		color: white;
+		display: flex;
+			flex-direction:column ;
+}
+#boutonspecialperso3:hover~#infospeperso3{
+		opacity: 1;
+
+}
+#infospeperso3{
+		opacity: 0.0;
+		color: white;
+		display: flex;
+			flex-direction:column ;
+}
+#boutonspecialperso4:hover~#infospeperso4{
+		opacity: 1;
+
+}
+#infospeperso4{
+		opacity: 0.0;
+		color: white;
+		display: flex;
+			flex-direction:column ;
 }
 
 /*------------------------------------------------------------------------------*/
