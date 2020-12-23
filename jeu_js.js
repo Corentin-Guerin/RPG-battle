@@ -342,6 +342,62 @@ function coutmana(perso){				//menuperso4
 	}
 }
 
+function attaquespe(perso){
+	if(perso == "menuperso1") {					//Perso1 = Heal 	
+		heal() ;
+	}
+	if(perso == "menuperso2") {					//Perso2 = malediction	
+		heal() ;
+		//malediction();
+	}
+	if(perso == "menuperso3") {					//Perso3 = Heal 	
+		heal() ;
+	}
+	if(perso == "menuperso4") {					//Perso4 = Heal 	
+		heal() ;
+	}
+}
+function maudit();{
+
+}
+
+function heal(){
+	var val = 30;																//var detien la plus grand add +30 val pv var2
+	var valhpperso =  document.getElementById('pvperso1')
+	if(valhpperso.value > document.getElementById('pvperso2').value){
+			valhpperso =  document.getElementById('pvperso2')
+	}
+	if(valhpperso.value > document.getElementById('pvperso3').value){
+			valhpperso =  document.getElementById('pvperso3')
+	}
+	if(valhpperso.value > document.getElementById('pvperso4').value){
+			valhpperso =  document.getElementById('pvperso4')
+	}
+
+	if((valhpperso.value+val)<=valhpperso.max){
+		valhpperso.value += val ;
+	}
+	else if((valhpperso.value+val)>=valhpperso.max){
+		 valhpperso.value = valhpperso.max ;
+	}
+	if(valhpperso == document.getElementById('pvperso1')){
+		var prc = document.getElementById('labelpvperso1');
+		prc.innerHTML = valhpperso.value;
+	}
+	if(valhpperso == document.getElementById('pvperso2')){
+		var prc = document.getElementById('labelpvperso2');
+		prc.innerHTML = valhpperso.value;
+	}
+	if(valhpperso == document.getElementById('pvperso3')){
+		var prc = document.getElementById('labelpvperso3');
+		prc.innerHTML = valhpperso.value;
+	}
+	if(valhpperso == document.getElementById('pvperso4')){
+		var prc = document.getElementById('labelpvperso4');
+		prc.innerHTML = valhpperso.value;
+	}
+}
+
 /*--------------- Menu Monstre ------------------*/ 
 
 function checkhpmonstre(){
@@ -793,11 +849,10 @@ function attaquemonstre(){
  
  function clicSpecial(choix,perso){				//choix=boutonDefense //perso = menuperso1-2-3-4
 	coutmana(perso);
-	//attaquespé();
-			//heal();
+	attaquespe(perso);
 			//attboost()
 			//poison()
-			//malediction()
+			
 
 	desative_choix(choix,perso);
 	desactive_bouton_Perso(perso);
