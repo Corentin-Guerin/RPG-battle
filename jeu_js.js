@@ -1,5 +1,7 @@
 var boostdommage = -0 
-var malediction = -0 
+var malediction = 0 
+var tourmalediction =0
+
 
 
 var Perso = ['pvperso1', 'pvperso2', 'pvperso3', 'pvperso4'];
@@ -342,13 +344,23 @@ function coutmana(perso){				//menuperso4
 	}
 }
 
+
+function checkspecial(){
+	if(tourmalediction>0){
+		tourmalediction -= 1;
+	}
+	else{
+		malediction = 0 ;
+	}
+	
+}
+
 function attaquespe(perso){
 	if(perso == "menuperso1") {					//Perso1 = Heal 	
 		heal() ;
 	}
 	if(perso == "menuperso2") {					//Perso2 = malediction	
-		heal() ;
-		//malediction();
+		maudit();
 	}
 	if(perso == "menuperso3") {					//Perso3 = Heal 	
 		heal() ;
@@ -357,9 +369,14 @@ function attaquespe(perso){
 		heal() ;
 	}
 }
-function maudit();{
-
+function maudit(){
+	malediction = 7 ;
+	tourmalediction = 2	;
 }
+
+
+
+
 
 function heal(){
 	var val = 30;																//var detien la plus grand add +30 val pv var2
@@ -871,7 +888,7 @@ function attaquemonstre(){
 	active_bouton_Perso();
 	attaquemonstre();
 	
-	//checkspecial 		check nb tour boost/poison   if tpoison = 3 dega monstre  tboostdmg = 1 degadbonus
+	checkspecial();				// 		check nb tour boost/poison   if tpoison = 3 dega monstre  tboostdmg = 1 degadbonus
 	checkhpmonstre() ; 
 	checkhpperso() ;
 	
