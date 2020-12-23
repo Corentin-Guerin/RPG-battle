@@ -364,7 +364,6 @@ function checkspecial(){
 
 function attaquespe(perso){
 	if(perso == "menuperso1") {					//Perso1 = Heal 	
-		//heal() ;
 		attboost()	;	
 	}
 	if(perso == "menuperso2") {					//Perso2 = malediction	
@@ -373,9 +372,8 @@ function attaquespe(perso){
 	if(perso == "menuperso3") {					//Perso3 = Heal 	
 		heal() ;
 	}
-	if(perso == "menuperso4") {					//Perso4 = Heal 	
-		heal() ;	
-		//poison()
+	if(perso == "menuperso4") {					//Perso4 = Heal 		
+		attboost()	;
 	}
 }
 function maudit(){
@@ -383,7 +381,7 @@ function maudit(){
 	tourmalediction = 2	;					//2 tours 
 }
 function attboost(){
-	boostdommage = -10 ;
+	boostdommage += -10 ;
 	tourboost  = 1;
 }
 
@@ -865,6 +863,7 @@ function attaquemonstre(){
  
  function clicattaque(choix,perso){				//choix=boutonAttaque //perso = menuperso1-2-3-4
 	active_bouton_monstre();
+	
 	desative_choix(choix,perso);
 	desactive_bouton_Perso(perso)
 	desaffiche_menu_perso(perso);
@@ -872,6 +871,7 @@ function attaquemonstre(){
  
  function clicdefense(choix,perso){				//choix=boutonDefense //perso = menuperso1-2-3-4
 	ajoutdefence(perso);
+	
 	desative_choix(choix,perso);
 	desactive_bouton_Perso(perso)
 	desaffiche_menu_perso(perso);
@@ -880,8 +880,7 @@ function attaquemonstre(){
  function clicSpecial(choix,perso){				//choix=boutonDefense //perso = menuperso1-2-3-4
 	coutmana(perso);
 	attaquespe(perso);
-			
-
+	
 	desative_choix(choix,perso);
 	desactive_bouton_Perso(perso);
 	desaffiche_menu_perso(perso);
