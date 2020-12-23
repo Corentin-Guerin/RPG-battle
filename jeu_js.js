@@ -41,6 +41,51 @@ function checkhpperso(){
 	document.getElementById(perso).style.display= "none";
 }
 
+
+function desactive_bouton_Perso(perso){
+	if (perso == "menuperso1"){
+		document.getElementById('boutonPerso1').disabled=true;
+	}
+	if (perso == "menuperso2"){
+		document.getElementById('boutonPerso2').disabled=true;
+	}
+	if (perso == "menuperso3"){
+		document.getElementById('boutonPerso3').disabled=true;
+	}
+	if (perso == "menuperso4"){
+		document.getElementById('boutonPerso4').disabled=true;
+	}
+
+}
+
+
+function active_bouton_Perso(){
+	document.getElementById('boutonPerso1').disabled=false;
+	document.getElementById('boutonPerso2').disabled=false;
+	document.getElementById('boutonPerso3').disabled=false;
+	document.getElementById('boutonPerso4').disabled=false;
+}
+
+function affichePerso(randomPerso,randomvtab){
+	if(randomPerso== "pvperso1"){
+			document.getElementById('boutonPerso1').style.display = "none";
+	}
+	if(randomPerso == "pvperso2"){
+			document.getElementById('boutonPerso2').style.display = "none";
+	}	
+	if(randomPerso== "pvperso3"){
+			document.getElementById('boutonPerso3').style.display = "none";
+	}
+	if(randomPerso == "pvperso4"){
+			document.getElementById('boutonPerso4').style.display = "none";
+	}
+	
+	Perso.splice(randomvtab, 1);					//supp l'element du tableau			
+ }	
+	
+
+
+
 function desative_choix(choix,perso){
 
 	if(choix == "boutonAttaque"){
@@ -57,31 +102,31 @@ function desative_choix(choix,perso){
 		if (perso == "menuperso2"){
 			document.getElementById('boutonattperso2').disabled=true;
 			document.getElementById('boutondefenseperso2').disabled=false;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso2').value >=25){
+				document.getElementById('boutonspecialperso2').disabled=false;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso2').disabled=true;
 			}
 		}
 		if (perso == "menuperso3"){
 			document.getElementById('boutonattperso3').disabled=true;
 			document.getElementById('boutondefenseperso3').disabled=false;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso3').value >=25){
+				document.getElementById('boutonspecialperso3').disabled=false;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso3').disabled=true;
 			}
 		}
 		if (perso == "menuperso4"){
 			document.getElementById('boutonattperso4').disabled=true;
 			document.getElementById('boutondefenseperso4').disabled=false;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso4').value >25){
+				document.getElementById('boutonspecialperso4').disabled=false;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso4').disabled=true;
 			}
 		}	
 	}
@@ -99,31 +144,31 @@ function desative_choix(choix,perso){
 		if (perso == "menuperso2"){
 			document.getElementById('boutonattperso2').disabled=false;
 			document.getElementById('boutondefenseperso2').disabled=true;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso2').value >=25){
+				document.getElementById('boutonspecialperso2').disabled=false;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso2').disabled=true;
 			}
 		}
 		if (perso == "menuperso3"){
 			document.getElementById('boutonattperso3').disabled=false;
 			document.getElementById('boutondefenseperso3').disabled=true;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso3').value >=25){
+				document.getElementById('boutonspecialperso3').disabled=false;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso3').disabled=true;
 			}
 		}
 		if (perso == "menuperso4"){
 			document.getElementById('boutonattperso4').disabled=false;
 			document.getElementById('boutondefenseperso4').disabled=true;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso4').value >=25){
+				document.getElementById('boutonspecialperso4').disabled=false;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso4').disabled=true;
 			}
 		}	
 	}
@@ -132,7 +177,7 @@ function desative_choix(choix,perso){
 			document.getElementById('boutonattperso1').disabled=false;
 			document.getElementById('boutondefenseperso1').disabled=false;
 			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+				document.getElementById('boutonspecialperso1').disabled=true;
 			}
 			else{
 				document.getElementById('boutonspecialperso1').disabled=true;
@@ -141,31 +186,31 @@ function desative_choix(choix,perso){
 		if (perso == "menuperso2"){
 			document.getElementById('boutonattperso2').disabled=false;
 			document.getElementById('boutondefenseperso2').disabled=false;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso2').value >=25){
+				document.getElementById('boutonspecialperso2').disabled=true;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso2').disabled=true;
 			}
 		}
 		if (perso == "menuperso3"){
 			document.getElementById('boutonattperso3').disabled=false;
 			document.getElementById('boutondefenseperso3').disabled=false;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso3').value >=25){
+				document.getElementById('boutonspecialperso3').disabled=true;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso3').disabled=true;
 			}
 		}
 		if (perso == "menuperso4"){
 			document.getElementById('boutonattperso4').disabled=false;
 			document.getElementById('boutondefenseperso4').disabled=false;
-			if(document.getElementById('manaperso1').value >=25){
-				document.getElementById('boutonspecialperso1').disabled=false;
+			if(document.getElementById('manaperso4').value >=25){
+				document.getElementById('boutonspecialperso4').disabled=true;
 			}
 			else{
-				document.getElementById('boutonspecialperso1').disabled=true;
+				document.getElementById('boutonspecialperso4').disabled=true;
 			}
 		}	
 	}	 
@@ -235,49 +280,67 @@ function ajoutdefence(perso){			//choix=boutonDefense //perso = menuperso1-2-3-4
 	}
 }
 
-function desactive_bouton_Perso(perso){
+
+
+function coutmana(perso){				//menuperso4
+	var val = 25;
 	if (perso == "menuperso1"){
-		document.getElementById('boutonPerso1').disabled=true;
+		
+		var mana = document.getElementById('manaperso1') ;
+		if(mana.value+val>0 && mana.value>=25){
+			mana.value -= val ;
+		}
+		else if((mana.value+val)<=0|| mana.value<25){
+			 mana.value = 0 ;
+			 document.getElementById('boutonspecialperso1').disabled=false;
+		}
+		var mana= document.getElementById('manaperso1');
+		var prc = document.getElementById('labelmanaperso1');
+		prc.innerHTML = mana.value;						
 	}
 	if (perso == "menuperso2"){
-		document.getElementById('boutonPerso2').disabled=true;
+		
+		var mana = document.getElementById('manaperso2') ;
+		if(mana.value+val>0 && mana.value>=25){
+			mana.value -= val ;
+		}
+		else if((mana.value+val)<=0|| mana.value<25){
+			 mana.value = 0 ;
+			 document.getElementById('boutonspecialperso2').disabled=false;
+		}
+		var mana= document.getElementById('manaperso2');
+		var prc = document.getElementById('labelmanaperso2');
+		prc.innerHTML = mana.value;						
 	}
 	if (perso == "menuperso3"){
-		document.getElementById('boutonPerso3').disabled=true;
+		
+		var mana = document.getElementById('manaperso3') ;
+		if(mana.value+val>0 && mana.value>=25){
+			mana.value -= val ;
+		}
+		else if((mana.value+val)<=0|| mana.value<25){
+			 mana.value = 0 ;
+			 document.getElementById('boutonspecialperso3').disabled=false;
+		}
+		var mana= document.getElementById('manaperso3');
+		var prc = document.getElementById('labelmanaperso3');
+		prc.innerHTML = mana.value;						
 	}
 	if (perso == "menuperso4"){
-		document.getElementById('boutonPerso4').disabled=true;
+		
+		var mana = document.getElementById('manaperso4') ;
+		if(mana.value+val>0 && mana.value>=25){
+			mana.value -= val ;
+		}
+		else if((mana.value+val)<=0|| mana.value<25){
+			 mana.value = 0 ;
+			 document.getElementById('boutonspecialperso4').disabled=false;
+		}
+		var mana= document.getElementById('manaperso4');
+		var prc = document.getElementById('labelmanaperso4');
+		prc.innerHTML = mana.value;						
 	}
-
 }
-
-
-function active_bouton_Perso(){
-	document.getElementById('boutonPerso1').disabled=false;
-	document.getElementById('boutonPerso2').disabled=false;
-	document.getElementById('boutonPerso3').disabled=false;
-	document.getElementById('boutonPerso4').disabled=false;
-}
-
-function affichePerso(randomPerso,randomvtab){
-	if(randomPerso== "pvperso1"){
-			document.getElementById('boutonPerso1').style.display = "none";
-	}
-	if(randomPerso == "pvperso2"){
-			document.getElementById('boutonPerso2').style.display = "none";
-	}	
-	if(randomPerso== "pvperso3"){
-			document.getElementById('boutonPerso3').style.display = "none";
-	}
-	if(randomPerso == "pvperso4"){
-			document.getElementById('boutonPerso4').style.display = "none";
-	}
-	
-	Perso.splice(randomvtab, 1);					//supp l'element du tableau			
- }	
-	
-
-
 
 /*--------------- Menu Monstre ------------------*/ 
 
@@ -729,12 +792,12 @@ function attaquemonstre(){
  }
  
  function clicSpecial(choix,perso){				//choix=boutonDefense //perso = menuperso1-2-3-4
-	//coutmana();
+	coutmana(perso);
 	//attaquespé();
-		//heal();
-		//attboost()
-		//poison()
-		//malediction()
+			//heal();
+			//attboost()
+			//poison()
+			//malediction()
 
 	desative_choix(choix,perso);
 	desactive_bouton_Perso(perso);
