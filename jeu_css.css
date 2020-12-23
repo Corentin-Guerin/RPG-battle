@@ -230,6 +230,10 @@ button:active {
 
 #interfacegagne{
 	display: none;
+		background-image: url(image/feu.gif);
+		background-repeat: no-repeat;
+		background-size: cover;
+		
 }
 #interfaceperdu{
 	display: none;
@@ -248,7 +252,7 @@ button:active {
 			
 		text-align: center;	
 		color: white;
-	
+		font-weight : 900 ;
 		background-color:black;
 		box-shadow: 3px 3px 10px #000000;
 		border-radius:5px;
