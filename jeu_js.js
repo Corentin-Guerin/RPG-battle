@@ -1,4 +1,5 @@
 var boostdommage = -0 
+var tourboost = 0
 var malediction = 0 
 var tourmalediction =0
 
@@ -349,15 +350,22 @@ function checkspecial(){
 	if(tourmalediction>0){
 		tourmalediction -= 1;
 	}
-	else{
+	if(tourmalediction==0){
 		malediction = 0 ;
+	}
+	if(tourboost>=0){
+		tourboost -= 1;
+	}
+	if(tourboost ==0) {
+		boostdommage = 0 ;
 	}
 	
 }
 
 function attaquespe(perso){
 	if(perso == "menuperso1") {					//Perso1 = Heal 	
-		heal() ;
+		//heal() ;
+		attboost()	;	
 	}
 	if(perso == "menuperso2") {					//Perso2 = malediction	
 		maudit();
@@ -366,12 +374,17 @@ function attaquespe(perso){
 		heal() ;
 	}
 	if(perso == "menuperso4") {					//Perso4 = Heal 	
-		heal() ;
+		heal() ;	
+		//poison()
 	}
 }
 function maudit(){
 	malediction = 7 ;
-	tourmalediction = 2	;
+	tourmalediction = 2	;					//2 tours 
+}
+function attboost(){
+	boostdommage = -10 ;
+	tourboost  = 1;
 }
 
 
@@ -867,8 +880,6 @@ function attaquemonstre(){
  function clicSpecial(choix,perso){				//choix=boutonDefense //perso = menuperso1-2-3-4
 	coutmana(perso);
 	attaquespe(perso);
-			//attboost()
-			//poison()
 			
 
 	desative_choix(choix,perso);
@@ -888,7 +899,7 @@ function attaquemonstre(){
 	active_bouton_Perso();
 	attaquemonstre();
 	
-	checkspecial();				// 		check nb tour boost/poison   if tpoison = 3 dega monstre  tboostdmg = 1 degadbonus
+	checkspecial();				// 		check nb tour boost/malédiction
 	checkhpmonstre() ; 
 	checkhpperso() ;
 	
@@ -897,39 +908,6 @@ function attaquemonstre(){
 
 
 
-
- /*--------------- Liste info  ------------------*/
-
-
- 
- /*
- var tpoison = 3 
-   function checkspecial()
-	tpoison -= 1 
-	if (tpoison = 0) 
-		poison = 0
-
- 
- 
- 
-Special perso1 :
-	-boost dommage : + 10 dega pdt 1 tour	
-
-Special perso2 :
-	-Malédiction : les monstre font -5 de dega pdt 2 tous 	//le tour peut augmenter su ult réutilisé
-	
-Special perso3 :
-	-Heal	: + 25 hp sur joueur les plus low hp
-
-Special perso4 :
-	-poison : - 7 dmg sur 2 tour à tous les monstres 		//le tour peut augmenter su ult réutilisé
- 
-*/
-
-
-
-
- 
 
  
  
