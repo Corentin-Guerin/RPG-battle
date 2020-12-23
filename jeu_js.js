@@ -255,7 +255,7 @@ function affichePerso(randomPerso,randomvtab){
 			document.getElementById('boutonPerso4').style.display = "none";
 	}
 	
-	Perso.splice(randomvtab-1, 1);					//supp l'element du tableau			
+	Perso.splice(randomvtab, 1);					//supp l'element du tableau			
  }	
 	
 
@@ -308,27 +308,31 @@ function attaquemonstre(){
 		var randomvtab = Math.floor(Math.random() * Perso.length);			//Pas du tous aleatoire ?
 		var randomPerso = Perso[randomvtab];								//si perso mort ne trouve pas de nouveau perso 
 		
-		var val = (Math.round(Math.random() * ((-20)-(-10)+1)-10));
+		var val = (Math.round(Math.random() * ((-15)-(-10)+1)-10));
 	
 	
 		if(randomPerso == "pvperso1"){
 			var shield = document.getElementById('bouclierperso1') ;
 			if((shield.value+val+malediction)>=0){			//malédiction		
-				shield.value += val+malediction ;
+				shield.value+= val+malediction ;
 				
-				var pvj1= document.getElementById('bouclierperso1');
-				var prcj1 = document.getElementById('labelbouclierperso1');
-				prcj1.innerHTML = pvj1.value;		
+				var prcbouclierj1 = document.getElementById('labelbouclierperso1');
+				prcbouclierj1.innerHTML = shield.value;		
 			}
-			else if((shield.value+val+malediction)<0){
-
-				var pv = document.getElementById('pvperso1') ;
-				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
-					pv.value += val+malediction ;				
-				}
-				else if((pv.value+val+malediction)<=0){
-				pv.value = 0 ;
-				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj1 = document.getElementById('labelbouclierperso1');
+				prcbouclierj1.innerHTML = shield.value;			
+	
+				var pvj1= document.getElementById('pvperso1');
+				var prcpvj1 = document.getElementById('labelpvperso1');
+				
+				pvj1.value += degassup ;
+				prcpvj1.innerHTML = pvj1.value;
+				if((pvj1.value)<=0){
+					pvj1.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
 				}
 				var pvj1= document.getElementById('pvperso1');
 				var prcj1 = document.getElementById('labelpvperso1');
@@ -338,73 +342,339 @@ function attaquemonstre(){
 		if(randomPerso == "pvperso2"){
 			var shield = document.getElementById('bouclierperso2') ;
 			if((shield.value+val+malediction)>=0){			//malédiction		
-				shield.value += val+malediction ;
+				shield.value+= val+malediction ;
 				
-				var pvj1= document.getElementById('bouclierperso2');
-				var prcj1 = document.getElementById('labelbouclierperso2');
-				prcj1.innerHTML = pvj1.value;		
+				
+				var prcbouclierj2 = document.getElementById('labelbouclierperso2');
+				prcbouclierj2.innerHTML = shield.value;		
 			}
-			else if((shield.value+val+malediction)<0){
-				var pv = document.getElementById('pvperso2') ;
-				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
-					pv.value += val+malediction ;				
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj2 = document.getElementById('labelbouclierperso2');
+				prcbouclierj2.innerHTML = shield.value;			
+	
+				var pvj2= document.getElementById('pvperso2');
+				var prcpvj2 = document.getElementById('labelpvperso2');
+				
+				pvj2.value += degassup ;
+				prcpvj2.innerHTML = pvj2.value;
+				if((pvj2.value)<=0){
+					pvj2.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction affichePerso*/
 				}
-				else if((pv.value+val+malediction)<=0){
-				pv.value = 0 ;
-				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
-				}
-				var pvj1= document.getElementById('pvperso2');
-				var prcj1 = document.getElementById('labelpvperso2');
-				prcj1.innerHTML = pvj1.value;
+				var pvj2= document.getElementById('pvperso2');
+				var prcj2 = document.getElementById('labelpvperso2');
+				prcj2.innerHTML = pvj2.value;
 			}
 		}
 		if(randomPerso == "pvperso3"){
 			var shield = document.getElementById('bouclierperso3') ;
 			if((shield.value+val+malediction)>=0){			//malédiction		
-				shield.value += val+malediction ;
+				shield.value+= val+malediction ;
 				
-				var pvj1= document.getElementById('bouclierperso3');
-				var prcj1 = document.getElementById('labelbouclierperso3');
-				prcj1.innerHTML = pvj1.value;		
+				
+				var prcbouclierj3 = document.getElementById('labelbouclierperso3');
+				prcbouclierj3.innerHTML = shield.value;		
 			}
-			else if((shield.value+val+malediction)<0){
-				var pv = document.getElementById('pvperso3') ;
-				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
-					pv.value += val+malediction ;				
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj3 = document.getElementById('labelbouclierperso3');
+				prcbouclierj3.innerHTML = shield.value;			
+	
+				var pvj3= document.getElementById('pvperso3');
+				var prcpvj3 = document.getElementById('labelpvperso3');
+				
+				pvj3.value += degassup ;
+				prcpvj3.innerHTML = pvj3.value;
+				if((pvj3.value)<=0){
+					pvj3.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
 				}
-				else if((pv.value+val+malediction)<=0){
-				pv.value = 0 ;
-				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
-				}
-				var pvj1= document.getElementById('pvperso3');
-				var prcj1 = document.getElementById('labelpvperso3');
-				prcj1.innerHTML = pvj1.value;
+				var pvj3= document.getElementById('pvperso3');
+				var prcj3 = document.getElementById('labelpvperso3');
+				prcj3.innerHTML = pvj3.value;
 			}
 		}
 		if(randomPerso == "pvperso4"){
 			var shield = document.getElementById('bouclierperso4') ;
 			if((shield.value+val+malediction)>=0){			//malédiction		
-				shield.value += val+malediction ;
+				shield.value+= val+malediction ;
 				
-				var pvj1= document.getElementById('bouclierperso4');
-				var prcj1 = document.getElementById('labelbouclierperso4');
-				prcj1.innerHTML = pvj1.value;		
+				
+				var prcbouclierj4 = document.getElementById('labelbouclierperso4');
+				prcbouclierj4.innerHTML = shield.value;		
 			}
-			else if((shield.value+val+malediction)<0){
-				var pv = document.getElementById('pvperso4') ;
-				if((pv.value+val+malediction)<=pv.max && (pv.value+val)>0){			//malédiction		
-					pv.value += val+malediction ;				
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj4 = document.getElementById('labelbouclierperso4');
+				prcbouclierj4.innerHTML = shield.value;			
+	
+				var pvj4= document.getElementById('pvperso4');
+				var prcpvj4 = document.getElementById('labelpvperso4');
+				
+				pvj4.value += degassup ;
+				prcpvj4.innerHTML = pvj4.value;
+				if((pvj4.value)<=0){
+					pvj4.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
 				}
-				else if((pv.value+val+malediction)<=0){
-				pv.value = 0 ;
-				affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
-				}
-				var pvj1= document.getElementById('pvperso4');
-				var prcj1 = document.getElementById('labelpvperso4');
-				prcj1.innerHTML = pvj1.value;
+				var pvj4= document.getElementById('pvperso4');
+				var prcj4 = document.getElementById('labelpvperso4');
+				prcj4.innerHTML = pvj4.value;
 			}
 		}
 	}	
+	if (document.getElementById('monstre2').style.display != "none"){
+
+		var randomvtab = Math.floor(Math.random() * Perso.length);			//Pas du tous aleatoire ?
+		var randomPerso = Perso[randomvtab];								//si perso mort ne trouve pas de nouveau perso 
+		
+		var val = (Math.round(Math.random() * ((-20)-(-13)+1)-10));
+	
+	
+		if(randomPerso == "pvperso1"){
+			var shield = document.getElementById('bouclierperso1') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				var prcbouclierj1 = document.getElementById('labelbouclierperso1');
+				prcbouclierj1.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj1 = document.getElementById('labelbouclierperso1');
+				prcbouclierj1.innerHTML = shield.value;			
+	
+				var pvj1= document.getElementById('pvperso1');
+				var prcpvj1 = document.getElementById('labelpvperso1');
+				
+				pvj1.value += degassup ;
+				prcpvj1.innerHTML = pvj1.value;
+				if((pvj1.value)<=0){
+					pvj1.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj1= document.getElementById('pvperso1');
+				var prcj1 = document.getElementById('labelpvperso1');
+				prcj1.innerHTML = pvj1.value;
+			}
+		}
+		if(randomPerso == "pvperso2"){
+			var shield = document.getElementById('bouclierperso2') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				
+				var prcbouclierj2 = document.getElementById('labelbouclierperso2');
+				prcbouclierj2.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj2 = document.getElementById('labelbouclierperso2');
+				prcbouclierj2.innerHTML = shield.value;			
+	
+				var pvj2= document.getElementById('pvperso2');
+				var prcpvj2 = document.getElementById('labelpvperso2');
+				
+				pvj2.value += degassup ;
+				prcpvj2.innerHTML = pvj2.value;
+				if((pvj2.value)<=0){
+					pvj2.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction affichePerso*/
+				}
+				var pvj2= document.getElementById('pvperso2');
+				var prcj2 = document.getElementById('labelpvperso2');
+				prcj2.innerHTML = pvj2.value;
+			}
+		}
+		if(randomPerso == "pvperso3"){
+			var shield = document.getElementById('bouclierperso3') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				
+				var prcbouclierj3 = document.getElementById('labelbouclierperso3');
+				prcbouclierj3.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj3 = document.getElementById('labelbouclierperso3');
+				prcbouclierj3.innerHTML = shield.value;			
+	
+				var pvj3= document.getElementById('pvperso3');
+				var prcpvj3 = document.getElementById('labelpvperso3');
+				
+				pvj3.value += degassup ;
+				prcpvj3.innerHTML = pvj3.value;
+				if((pvj3.value)<=0){
+					pvj3.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj3= document.getElementById('pvperso3');
+				var prcj3 = document.getElementById('labelpvperso3');
+				prcj3.innerHTML = pvj3.value;
+			}
+		}
+		if(randomPerso == "pvperso4"){
+			var shield = document.getElementById('bouclierperso4') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				
+				var prcbouclierj4 = document.getElementById('labelbouclierperso4');
+				prcbouclierj4.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj4 = document.getElementById('labelbouclierperso4');
+				prcbouclierj4.innerHTML = shield.value;			
+	
+				var pvj4= document.getElementById('pvperso4');
+				var prcpvj4 = document.getElementById('labelpvperso4');
+				
+				pvj4.value += degassup ;
+				prcpvj4.innerHTML = pvj4.value;
+				if((pvj4.value)<=0){
+					pvj4.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj4= document.getElementById('pvperso4');
+				var prcj4 = document.getElementById('labelpvperso4');
+				prcj4.innerHTML = pvj4.value;
+			}
+		}
+	}
+	if (document.getElementById('monstre3').style.display != "none"){
+
+		var randomvtab = Math.floor(Math.random() * Perso.length);			//Pas du tous aleatoire ?
+		var randomPerso = Perso[randomvtab];								//si perso mort ne trouve pas de nouveau perso 
+		
+		var val = (Math.round(Math.random() * ((-15)-(-10)+1)-10));
+	
+	
+		if(randomPerso == "pvperso1"){
+			var shield = document.getElementById('bouclierperso1') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				var prcbouclierj1 = document.getElementById('labelbouclierperso1');
+				prcbouclierj1.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj1 = document.getElementById('labelbouclierperso1');
+				prcbouclierj1.innerHTML = shield.value;			
+	
+				var pvj1= document.getElementById('pvperso1');
+				var prcpvj1 = document.getElementById('labelpvperso1');
+				
+				pvj1.value += degassup ;
+				prcpvj1.innerHTML = pvj1.value;
+				if((pvj1.value)<=0){
+					pvj1.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj1= document.getElementById('pvperso1');
+				var prcj1 = document.getElementById('labelpvperso1');
+				prcj1.innerHTML = pvj1.value;
+			}
+		}
+		if(randomPerso == "pvperso2"){
+			var shield = document.getElementById('bouclierperso2') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				
+				var prcbouclierj2 = document.getElementById('labelbouclierperso2');
+				prcbouclierj2.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj2 = document.getElementById('labelbouclierperso2');
+				prcbouclierj2.innerHTML = shield.value;			
+	
+				var pvj2= document.getElementById('pvperso2');
+				var prcpvj2 = document.getElementById('labelpvperso2');
+				
+				pvj2.value += degassup ;
+				prcpvj2.innerHTML = pvj2.value;
+				if((pvj2.value)<=0){
+					pvj2.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction affichePerso*/
+				}
+				var pvj2= document.getElementById('pvperso2');
+				var prcj2 = document.getElementById('labelpvperso2');
+				prcj2.innerHTML = pvj2.value;
+			}
+		}
+		if(randomPerso == "pvperso3"){
+			var shield = document.getElementById('bouclierperso3') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				
+				var prcbouclierj3 = document.getElementById('labelbouclierperso3');
+				prcbouclierj3.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj3 = document.getElementById('labelbouclierperso3');
+				prcbouclierj3.innerHTML = shield.value;			
+	
+				var pvj3= document.getElementById('pvperso3');
+				var prcpvj3 = document.getElementById('labelpvperso3');
+				
+				pvj3.value += degassup ;
+				prcpvj3.innerHTML = pvj3.value;
+				if((pvj3.value)<=0){
+					pvj3.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj3= document.getElementById('pvperso3');
+				var prcj3 = document.getElementById('labelpvperso3');
+				prcj3.innerHTML = pvj3.value;
+			}
+		}
+		if(randomPerso == "pvperso4"){
+			var shield = document.getElementById('bouclierperso4') ;
+			if((shield.value+val+malediction)>=0){			//malédiction		
+				shield.value+= val+malediction ;
+				
+				
+				var prcbouclierj4 = document.getElementById('labelbouclierperso4');
+				prcbouclierj4.innerHTML = shield.value;		
+			}
+			else if((shield.value+val+malediction)<=0){
+				var degassup = shield.value+val+malediction
+				shield.value = 0 ;	
+				var prcbouclierj4 = document.getElementById('labelbouclierperso4');
+				prcbouclierj4.innerHTML = shield.value;			
+	
+				var pvj4= document.getElementById('pvperso4');
+				var prcpvj4 = document.getElementById('labelpvperso4');
+				
+				pvj4.value += degassup ;
+				prcpvj4.innerHTML = pvj4.value;
+				if((pvj4.value)<=0){
+					pvj4.value = 0 ;
+					affichePerso(randomPerso,randomvtab);					/* lance la fonction afficheP*/
+				}
+				var pvj4= document.getElementById('pvperso4');
+				var prcj4 = document.getElementById('labelpvperso4');
+				prcj4.innerHTML = pvj4.value;
+			}
+		}
+	}
 }
 
  
